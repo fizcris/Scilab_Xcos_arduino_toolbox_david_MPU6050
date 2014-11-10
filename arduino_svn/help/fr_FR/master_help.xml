@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY aeb1151d67e1ffcc53e460c49697b8340 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/ANALOG_READ_SB.xml">
+<!ENTITY a556d8f1ee50d8ede531375eae437838b SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/ANALOG_WRITE_SB.xml">
+<!ENTITY af512f3be0e2542213d94a7ad80c92951 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/ARDUINO_SETUP.xml">
+<!ENTITY aeac630539fd77aef85e8bd52eadf2375 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/DCMOTOR_SB.xml">
+<!ENTITY a65aa5c56be918e7c9de4bf2c462cb99b SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/DIGITAL_READ_SB.xml">
+<!ENTITY a5c9eb2a9c4b8947c268731f3aa6a854c SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/DIGITAL_WRITE_SB.xml">
+<!ENTITY a97f79ccc24f1541391e9fadcee1b3f7d SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/ENCODER_SB.xml">
+<!ENTITY a96480e90a3ba0b9158ceb7cc7d517aa0 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/INTERRUPT_SB.xml">
+<!ENTITY a9bdef256f756f201c54ba9fda76994e5 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/SERVO_WRITE_SB.xml">
+<!ENTITY a9690535de34e36b163e342ca46c82a07 SYSTEM "file:///C:/Program Files (x86)/scilab-master-1370351008/contrib/arduino_svn/help/fr_FR/TIME_SAMPLE.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="fr_FR"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='arduino_toolbox_manual'>
+    <title>Arduino toolbox</title>
+  </info>
+
+<part xml:id='section_f0e1de51d2b8f4700b0a9405e8a884ef'>
+<title>Arduino toolbox</title>
+&aeb1151d67e1ffcc53e460c49697b8340;
+&a556d8f1ee50d8ede531375eae437838b;
+&af512f3be0e2542213d94a7ad80c92951;
+&aeac630539fd77aef85e8bd52eadf2375;
+&a65aa5c56be918e7c9de4bf2c462cb99b;
+&a5c9eb2a9c4b8947c268731f3aa6a854c;
+&a97f79ccc24f1541391e9fadcee1b3f7d;
+&a96480e90a3ba0b9158ceb7cc7d517aa0;
+&a9bdef256f756f201c54ba9fda76994e5;
+&a9690535de34e36b163e342ca46c82a07;
+</part>
+</book>

@@ -1,0 +1,85 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>INTERRUPT_SB</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="ENCODER_SB.html">&lt;&lt; ENCODER_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="SERVO_WRITE_SB.html">SERVO_WRITE_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; INTERRUPT_SB</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">INTERRUPT_SB</h1>
+  <p class="refpurpose">Permet de compter un ensemble d&#0039;événements sur une ou plusieurs voies.</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="INTERRUPT_SB.html" class="link">Permet de compter un ensemble d&#0039;événements sur une ou plusieurs voies.</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="INTERRUPT_SB.html#Palette_INTERRUPT_SB" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="INTERRUPT_SB.html#Description_INTERRUPT_SB" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="INTERRUPT_SB.html#Dialogbox_INTERRUPT_SB" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="INTERRUPT_SB.html#Example1_INTERRUPT_SB" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="INTERRUPT_SB.html#Seealso_INTERRUPT_SB" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Il s&#0039;agit de lire un compteur qui compte l&#0039;information issue de capteurs de position absolue (capteur à effet Hall...).</p>
+<p class="para">Le bloc permet de lire les fronts montants détectés sur les entrées à interruptions disponibles de la carte Arduino. Ce sont des entrées capables d’arrêter le programme principal lors d&#0039;un changement d’état (fronts d&#0039;un signal) afin d’exécuter un sous-programme. Ce sous-programme consiste dans ce cas à incrémenter un compteur.</p>
+<p class="para">Les pins 2 et 3 sont les seuls pins de l&#0039;Arduino Uno supportant les interruptions. Sur la carte Mega, les pins sont 2, 3 et 18 à 21.</p>
+<p class="para">On rappelle que l&#0039;échantillonnage est de 8 ms au minimum pour ce bloc.</p></div>
+<a name="Dialogbox_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+
+<p class="para">Le bloc propose un menu qui permet la déclaration du pin d&#0039;interruption 2 ou 3 sur une carte UNO (2, 3 ou 18 à 21 pour la carte MEGA) et déclaration d&#0039;un pin digital quelconque de 2 à 13 pour une carte UNO (2 à 53 pour la carte MEGA).</p>
+<p class="para">Le numéro de la carte ne peut pas être modifié pour l&#0039;instant.</p>
+<span></span></div>
+<a name="Example1_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessous montre l&#0039;utilisation du bloc pour compter le signal d&#0039;une fourche optique connecté sur le pin 3.</p>
+<span></span></div>
+<a name="Seealso_INTERRUPT_SB"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="ENCODER_SB.html" class="link">ENCODER_SB</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="ENCODER_SB.html">&lt;&lt; ENCODER_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="SERVO_WRITE_SB.html">SERVO_WRITE_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+Toolbox: Arduino
+
+Title: Arduino
+
+Summary: Arduino Communication through Serial
+
+Version: 1.0-1
+
+Author: Bruno JOFRET, David Violeau, Alain Caignot, Marc Derumaux, Emmanuel Broutier
+
+Maintainer: Bruno Jofret <bruno.jofret@scilab.org>
+
+Category: Instruments Control
+
+Entity: Scilab Enterprise
+
+WebSite: http://www.demosciences.fr
+
+URL: http://atoms.scilab.org/toolboxes/arduino
+
+License: CeCILL-B
+
+ScilabVersion: >= 5.4
+
+Depends:
+
+Date: 2013-03-03 10:40:49
+
+Description: This toolbox provides Arduino communication blocks for Xcos.
+
+Communication is performed through Serial port. This toolbox works only on Windows (with scilab 32 or 64 bits)
+
+In order to communicate with arduino card, a sketch must be loaded into the card. It can be found on website : http://www.demosciences.fr
+Documentation of each block is available but a user guide is written on the same website.
+
+Cette toolbox permet de faire communiquer Xcos avec une carte Arduino.
+La communication est réalisée à travers un port Série (virtualisé). Cette toolbox ne fonctionne que sous Windows (avec Scilab 32 ou 64 bits).
+Pour communiquer avec la carte Arduino, un sketch doit être chargé dans la carte grâce au logiciel livré avec l'Arduino. Ce sketch peut être téléchargé sur le site : http://www.demosciences.fr
+Une documentation pour chaque bloc (Help) est disponible mais un guide utilisateur avec exemples est proposé sur le site Demosciences. Des exemples sont disponibles dans les Demos Xcos.

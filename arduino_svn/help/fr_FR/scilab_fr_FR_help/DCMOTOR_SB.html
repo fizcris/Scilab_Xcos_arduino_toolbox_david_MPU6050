@@ -1,0 +1,100 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>DCMOTOR_SB</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="ARDUINO_SETUP.html">&lt;&lt; ARDUINO_SETUP</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="DIGITAL_READ_SB.html">DIGITAL_READ_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; DCMOTOR_SB</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">DCMOTOR_SB</h1>
+  <p class="refpurpose">Permet de piloter un hacheur (relié à un moteur)</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="DCMOTOR_SB.html" class="link">Permet de piloter un hacheur (relié à un moteur)</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="DCMOTOR_SB.html#Palette_DCMOTOR_SB" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="DCMOTOR_SB.html#Description_DCMOTOR_SB" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="DCMOTOR_SB.html#Dialogbox_DCMOTOR_SB" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="DCMOTOR_SB.html#Example1_DCMOTOR_SB" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="DCMOTOR_SB.html#Seealso_DCMOTOR_SB" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Le bloc DCMOTOR permet de piloter 1 ou plusieurs moteurs à courant continu. La carte Arduino ne délivre pas suffisamment de puissance, c&#0039;est pourquoi il est nécessaire d&#0039;utiliser un préactionneur de type hacheur en amont du moteur. Il existe plusieurs types de hacheurs qui ne fonctionnent pas tous selon le même principe. Le L298 nécessite par exemple l&#0039;utilisation d&#0039;un PWM et d&#0039;un signal logique spécifiant le sens. Le L293 utilise deux PWM pour spécifier la vitesse et le sens. Des cartes prêtes à l&#0039;emploi sont également disponibles.</p>
+<p class="para">C&#0039;est pourquoi le bloc permet de choisir le type de carte ou de hacheur utilisé et en fonction du choix, un menu propose de spécifier les caractéristiques de chaque composant (numéro des ports utilisés ou bien numéro du moteur...)</p>
+<p class="para">On rappelle que le PWM est codé sur 8 bits (de 0 à 255).</p>
+<p class="para">Cependant en entrée du bloc, il est possible d&#0039;entrer un nombre positif ou négatif quelconque, une saturation logicielle à +- 255 est integrée dans la définition du bloc.</p>
+<p class="para">On rappelle que l&#0039;échantillonnage est de 8 ms au minimum pour ce bloc.</p></div>
+<a name="Dialogbox_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+
+<p class="para">Le bloc propose deux menus.</p>
+<p class="para">Le premier permet de choisir le type de carte utilisé :</p>
+<p class="para">1 pour la carte officielle Motorshield Reverse 3 disponible sur le site arduino.cc,</p>
+<p class="para">2 pour un hacheur L298 utilisant un PWM et un sens,</p>
+<p class="para">3 pour un hacheur L293 utilisant deux PWM</p>
+<p class="para">Le numéro de la carte ne peut pas être modifié pour l&#0039;instant.</p>
+<span></span>
+
+<p class="para">Le second menu est spécifique au type de carte retenue</p>
+<p class="para">Pour la carte Motorshield on renseigne le numéro 1 ou 2 pour le moteur A ou B</p>
+<span></span>
+<p class="para">Pour le L298, on renseigne le numéro du port de spécification du sens (n&#0039;importe quel port digital), le numéro du port PWM pour la vitesse (3,5,6,9,10,11) et le numéro du moteur piloté (limité de 1 à 4)</p>
+<span></span>
+<p class="para">Pour le L293, on renseigne les numéros des 2 PWM et le numéro du moteur (de 1 à 3)</p>
+<span></span></div>
+<a name="Example1_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessous montre l&#0039;utilisation du bloc moteur associé à un potentiomètre. Lorsque le potentiomètre est en position médiane, le moteur ne tourne pas tandis que lorsque le potentiomètre est tourné dans un sens ou dans l&#0039;autre, le moteur tourne plus ou moins vite dans un sens ou dans l&#0039;autre.</p>
+<p class="para">Un gain d&#0039;adaptation a été utilisé pour convertir les données numériques codées sur 10 bits et l&#0039;entrée moteur codée sur 8 bits.</p>
+<span></span></div>
+<a name="Seealso_DCMOTOR_SB"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="ENCODER_SB.html" class="link">ENCODER_SB</a></p>
+      <p class="para"><a href="SERVO_WRITE_SB.html" class="link">SERVO_WRITE_SB</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="ARDUINO_SETUP.html">&lt;&lt; ARDUINO_SETUP</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="DIGITAL_READ_SB.html">DIGITAL_READ_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

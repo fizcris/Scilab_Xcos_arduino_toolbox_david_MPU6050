@@ -1,0 +1,85 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ANALOG_WRITE_SB</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="ANALOG_READ_SB.html">&lt;&lt; ANALOG_READ_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="ARDUINO_SETUP.html">ARDUINO_SETUP &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; ANALOG_WRITE_SB</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">ANALOG_WRITE_SB</h1>
+  <p class="refpurpose">Permet d&#0039;envoyer une valeur continûment variable sur un port donné</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="ANALOG_WRITE_SB.html" class="link">Permet d&#0039;envoyer une valeur continûment variable sur un port donné</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="ANALOG_WRITE_SB.html#Palette_ANALOG_WRITE_SB" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="ANALOG_WRITE_SB.html#Description_ANALOG_WRITE_SB" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="ANALOG_WRITE_SB.html#Dialogbox_ANALOG_WRITE_SB" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="ANALOG_WRITE_SB.html#Example1_ANALOG_WRITE_SB" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="ANALOG_WRITE_SB.html#Seealso_ANALOG_WRITE_SB" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Les sorties analogiques de l&#0039;Arduino Uno sont disponibles sur les pins de sorties logiques (digital)  3,5,6,9,10 et 11. Sur la carte Mega, les sorties sont sur les pins 1 à 13 et 44 à 46. Parler de sorties analogiques est donc un abus de langage. En effet, pour générer cette sortie en minimisant les pertes d’énergie, l&#0039;Arduino utilise des PWM (Pulse With Modulation, MLI en français) disponibles sur ces ports. En faisant varier le rapport cyclique de ces PWM, on modifie la tension moyenne aux bornes du composant connecté à ce port, celui-ci a donc l&#0039;impression d&#0039;avoir une tension d&#0039;entrée variable.</p>
+<p class="para">Le rapport cyclique qui théoriquement varie de 0 à 1 est codé sur 8 bits, ainsi une valeur de 0 correspond à un rapport cyclique de 0 et une valeur de 255 à un rapport cyclique de 1.</p>
+<p class="para">On rappelle que l&#0039;échantillonnage est de 8 ms au minimum pour ce bloc.</p></div>
+<a name="Dialogbox_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+<span></span>
+<p class="para">Le numéro du port doit être 3, 5, 6, 9, 10, 11 pour une carte UNO (ports ayant le symbole PWM) et doit être de 1 à 13 ou 44 à 46 pour la carte MEGA. L&#0039;utilisation d&#0039;un port digital provoquera soit la mise à 0 soit la mise à 1 de celui-ci en fonction de la valeur envoyée.</p>
+<p class="para">Le numéro de la carte ne peut pas être modifié pour l&#0039;instant.</p></div>
+<a name="Example1_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessous montre l&#0039;utilisation du bloc dans le cas d&#0039;un variateur de l&#0039;intensité lumineuse d&#0039;une LED à partir d&#0039;une consigne issue d&#0039;un potentiomètre. La LED (en série avec une résistance bien choisie) est connectée à la masse (GND) et au port digital 10 tandis que le potentiomètre est connecté sur le port analogique 2. La valeur lue pour le potentiomètre étant codée sur 10 bits et le signal du PWM étant codé sur 8 bits, il est nécessaire d&#0039;ajouter une gain d&#0039;adaptation.</p>
+<span></span></div>
+<a name="Seealso_ANALOG_WRITE_SB"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="ANALOG_READ_SB.html" class="link">ANALOG_READ_SB</a></p>
+      <p class="para"><a href="DIGITAL_READ_SB.html" class="link">DIGITAL_READ_SB</a></p>
+      <p class="para"><a href="DIGITAL_WRITE_SB.html" class="link">DIGITAL_WRITE_SB</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="ANALOG_READ_SB.html">&lt;&lt; ANALOG_READ_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="ARDUINO_SETUP.html">ARDUINO_SETUP &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

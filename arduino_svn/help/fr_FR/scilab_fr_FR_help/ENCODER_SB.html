@@ -1,0 +1,101 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ENCODER_SB</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="DIGITAL_WRITE_SB.html">&lt;&lt; DIGITAL_WRITE_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="INTERRUPT_SB.html">INTERRUPT_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; ENCODER_SB</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">ENCODER_SB</h1>
+  <p class="refpurpose">Permet de compter un ensemble d&#0039;événements sur une ou plusieurs voies.</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_ENCODER_SB"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="ENCODER_SB.html" class="link">Permet de compter un ensemble d&#0039;événements sur une ou plusieurs voies.</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="ENCODER_SB.html#Palette_ENCODER_SB" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="ENCODER_SB.html#Description_ENCODER_SB" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="ENCODER_SB.html#Dialogbox_ENCODER_SB" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="ENCODER_SB.html#Example1_ENCODER_SB" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="ENCODER_SB.html#Example2_ENCODER_SB" class="xref">Exemple 2</a></p></li>
+        <li><p class="para"><a href="ENCODER_SB.html#Seealso_ENCODER_SB" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_ENCODER_SB"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_ENCODER_SB"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Beaucoup de capteurs (codeur incrémental, capteur à effet Hall...) renvoient un signal créneau pour lequel on souhaite compter les fronts. Le bloc permet de réaliser cette opération pour un ou deux codeurs. On utilise pour cela les interruptions disponibles sur la carte Arduino. Ce sont des entrées capables d’arrêter le programme principal lors d&#0039;un changement d’état (fronts d&#0039;un signal) afin d’exécuter un sous-programme. Ce sous-programme consiste dans ce cas à incrémenter ou décrémenter un compteur.</p>
+<p class="para">Les pins 2 et 3 sont les seuls pins de l&#0039;Arduino Uno supportant les interruptions. Sur la carte Mega, les pins sont 2, 3 et 18 à 21. Il est nécessaire d&#0039;utiliser un signal supplémentaire pour connaître le sens du codeur.</p>
+<p class="para">Ainsi, le bloc offre la possibilité de fonctionner un codeur en quadrature, il faut alors que les deux voies soient câblées sur les pins d&#0039;interruption et les fronts montants et descendants sont pris en compte sur les deux voies (la précision est augmentée et on peut également déterminer le sens).</p>
+<p class="para">Par contre si on utilise un mode autre que la quadrature, seule une voie doit être branchée en interruption, l&#0039;autre peut être reliée à une entrée logique classique.</p>
+
+<p class="para">On rappelle que l&#0039;échantillonnage est de 8 ms au minimum pour ce bloc.</p></div>
+<a name="Dialogbox_ENCODER_SB"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+
+<p class="para">Le bloc propose deux menus.</p>
+<p class="para">Le premier permet de choisir le mode de lecture du signal délivré par le codeur (choix entre 1, 2 ou 4).</p>
+<p class="para">Le numéro de la carte ne peut pas être modifié pour l&#0039;instant.</p>
+<span></span>
+<p class="para">Le mode 1 utilise une seule voie d&#0039;interruption et une voie digitale quelconque pour déterminer le sens. Seuls les fronts montants de la voie d&#0039;interruption sont pris en compte dans ce mode.</p>
+<p class="para">Le mode 2 utilise les mêmes voies mais les fronts montants et descendants de la voie d&#0039;interruption sont pris en compte.</p>
+<p class="para">Le mode 4 correspond au mode quadrature. Dans ce mode, les fronts montants et descendants des deux voies sont pris en compte.</p>
+
+<p class="para">Le second menu permet de spécifier les ports utilisés en fonction du mode retenu :</p>
+<span></span>
+<p class="para">mode 1x : déclaration du pin d&#0039;interruption 2 ou 3 sur une carte UNO (2, 3 ou 18 à 21 pour la carte MEGA) et déclaration d&#0039;un pin digital quelconque de 2 à 13 pour une carte UNO (2 à 53 pour la carte MEGA)</p>
+<p class="para">mode 2x : même principe.</p>
+<p class="para">mode 4x : utilisation obligatoire de deux pins d&#0039;interruptions 2 et 3 sur une carte UNO ou 2 parmi 2, 3 ou 18 à 21 pour une carte MEGA.</p></div>
+<a name="Example1_ENCODER_SB"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessous montre l&#0039;utilisation du bloc dans le cas d&#0039;un moteur dont on relève la position au cours du temps et la vitesse à partir du signal provenant du codeur. Le mode 4x a été choisi pour améliorer la précision. Le paramétrage du moteur est le même que celui de l&#0039;exemple sur le moteur.</p>
+<span></span></div>
+<a name="Example2_ENCODER_SB"></a><div class="refsection"><h3 class="title">Exemple 2</h3>
+<p class="para">L&#0039;exemple suivant montre un asservissement de position utilisant l&#0039;information du codeur pour comparaison avec une grandeur de consigne. Un correcteur PI est utilisé pour corrigé l&#0039;écart et délivrer la tension de commande du moteur à courant continu.</p>
+<span></span></div>
+<a name="Seealso_ENCODER_SB"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="DCMOTOR_SB.html" class="link">DCMOTOR_SB</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="DIGITAL_WRITE_SB.html">&lt;&lt; DIGITAL_WRITE_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="INTERRUPT_SB.html">INTERRUPT_SB &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

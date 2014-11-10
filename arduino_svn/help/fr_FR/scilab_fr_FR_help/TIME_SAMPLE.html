@@ -1,0 +1,82 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>TIME_SAMPLE</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="SERVO_WRITE_SB.html">&lt;&lt; SERVO_WRITE_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; TIME_SAMPLE</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">TIME_SAMPLE</h1>
+  <p class="refpurpose">Permet de spécifier la durée d&#0039;acquisition/pilotage et le pas d&#0039;échantillonnage</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="TIME_SAMPLE.html" class="link">Permet de spécifier la durée d&#0039;acquisition/pilotage et le pas d&#0039;échantillonnage</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="TIME_SAMPLE.html#Palette_TIME_SAMPLE" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="TIME_SAMPLE.html#Description_TIME_SAMPLE" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="TIME_SAMPLE.html#Dialogbox_TIME_SAMPLE" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="TIME_SAMPLE.html#Example1_TIME_SAMPLE" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="TIME_SAMPLE.html#Seealso_TIME_SAMPLE" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Ce bloc doit <b>obligatoirement</b> être placé sur le schéma lors de l&#0039;utilisation d&#0039;autres blocs de la toolbox.</p>
+<p class="para">Il permet de définir la durée de communication avec la carte Arduino ainsi que le pas d&#0039;échantillonnage utilisé pour les blocs (chaque bloc est cadencé par ce pas).</p>
+<p class="para">La communication série impose un pas limite pour chaque bloc qui est d&#0039;environ 8 ms (il est possible de descendre à 4 ms) par bloc.</p>
+<p class="para">Il conviendra de tester pour des acquisitions complexes que l&#0039;échantillonnage retenu est suffisant, pour cela, il faut mesurer que le temps de simulation correspond au temps réel (une simulation de 10 s doit durer 10 s) ; à défaut, il faudra augmenter la période d&#0039;échantillonnage.</p></div>
+<a name="Dialogbox_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+<span></span>
+<p class="para">La durée de simulation (positive) doit être spécifiée.</p>
+<p class="para">Le pas d&#0039;échantillonnage doit être renseigné en faisant attention au nombre de blocs Arduino utilisé.</p></div>
+<a name="Example1_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessus montre l&#0039;utilisation du bloc dans le cas du clignotement de la led 13 de la carte UNO définie sur le port de communication 5. Les blocs utilisent les paramètres par défaut, sauf pour le bloc PULSE de la palette standard dont on spécifie le déphasage à 0.</p>
+<span></span></div>
+<a name="Seealso_TIME_SAMPLE"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="ARDUINO_SETUP.html" class="link">ARDUINO_SETUP</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="SERVO_WRITE_SB.html">&lt;&lt; SERVO_WRITE_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

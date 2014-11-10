@@ -1,0 +1,89 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>SERVO_WRITE_SB</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="INTERRUPT_SB.html">&lt;&lt; INTERRUPT_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="TIME_SAMPLE.html">TIME_SAMPLE &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path"><a href="index.html">Arduino toolbox</a> &gt;&gt; <a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a> &gt; SERVO_WRITE_SB</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">SERVO_WRITE_SB</h1>
+  <p class="refpurpose">Permet de piloter un servomoteur en renseignant l&#0039;angle de 0 à 180° souhaité</p></div>
+<div class="refsection"><h3 class="title">Aperçu</h3>
+    <p class="para"><span></span></p></div>
+<a name="Contents_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Contenu</h3>
+  <ul class="itemizedlist"><li><p class="para"><a href="SERVO_WRITE_SB.html" class="link">Permet de piloter un servomoteur en renseignant l&#0039;angle de 0 à 180° souhaité</a></p></li>
+    <li><ul class="itemizedlist"><li><p class="para"><a href="SERVO_WRITE_SB.html#Palette_SERVO_WRITE_SB" class="xref">Palette</a></p></li>
+        <li><p class="para"><a href="SERVO_WRITE_SB.html#Description_SERVO_WRITE_SB" class="xref">Description</a></p></li>
+        <li><p class="para"><a href="SERVO_WRITE_SB.html#Dialogbox_SERVO_WRITE_SB" class="xref">Boite de dialogue</a></p></li>
+        <li><p class="para"><a href="SERVO_WRITE_SB.html#Example1_SERVO_WRITE_SB" class="xref">Exemple 1</a></p></li>
+        <li><p class="para"><a href="SERVO_WRITE_SB.html#Seealso_SERVO_WRITE_SB" class="xref">Voir aussi</a></p></li></ul></li></ul></div>  
+<a name="Palette_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Palette</h3>
+Arduino</div>
+<a name="Description_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Description</h3>
+<p class="para">Un servomoteur est un ensemble constitué d&#0039;un moteur électrique, d&#0039;un réducteur, d&#0039;un potentiomètre et d&#0039;une partie électronique analogique ou numérique pour la commande. C&#0039;est donc un asservissement de position (ou de vitesse pour les servomoteurs à rotation continue).</p>
+<p class="para">L&#0039;utilisateur ne doit donc qu&#0039;envoyer la consigne de position ou de vitesse souhaitée. Cette consigne est transmise au servomoteur sous forme d&#0039;impulsions espacées de 10 à 20 ms. Le codage de ces impulsions est fait de telle façon qu&#0039;une impulsion de 1,5 ms correspond à la position centrée (de repos), une impulsion de 1 ms correspond à un angle de 90° dans le sens trigonométrique et enfin une impulsion de 2 ms correspond à un angle de 90° dans le sens horaire. Toutes les autres largeurs d&#0039;impulsion donneront des valeurs intermédiaires.</p>
+<p class="para">Pour un servomoteur à rotation continue, la largeur des impulsions donne la vitesse de rotation ainsi que le sens.</p>
+<p class="para">Il faut penser à utiliser un régulateur de tension plutôt que l&#0039;alimentation de la carte Arduino pour alimenter le servomoteur.</p>
+<p class="para">Pour simplifier, le bloc ne demande en entrée que l&#0039;angle souhaité en degré de 0 à 180.</p>
+<p class="para">Deux servomoteurs peuvent être pilotés avec la toolbox.</p>
+
+<p class="para">On rappelle que l&#0039;échantillonnage est de 10 ms au minimum pour ce bloc.</p></div>
+<a name="Dialogbox_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Boite de dialogue</h3>
+<span></span>
+<p class="para">Le bloc propose de choisir le numéro du servomoteur piloté.</p>
+<p class="para">Le numéro de la carte ne peut pas être modifié pour l&#0039;instant.</p></div>
+<a name="Example1_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Exemple 1</h3>
+<p class="para">L&#0039;exemple ci-dessous montre l&#0039;utilisation du bloc servomoteur dont la position est donnée par un potentiomètre relié sur le port analogique 0.</p>
+<p class="para">Un gain d&#0039;adaptation a été utilisé pour convertir les données numériques codées sur 10 bits en sortie du potentiomètre en une grandeur variant de 0 à 180 pour spécifier la position souhaitée du servomoteur.</p>
+<span></span></div>
+<a name="Seealso_SERVO_WRITE_SB"></a><div class="refsection"><h3 class="title">Voir aussi</h3>
+      <p class="para"><a href="DCMOTOR_SB.html" class="link">DCMOTOR_SB</a></p></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="INTERRUPT_SB.html">&lt;&lt; INTERRUPT_SB</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_f0e1de51d2b8f4700b0a9405e8a884ef.html">Arduino toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="TIME_SAMPLE.html">TIME_SAMPLE &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>
