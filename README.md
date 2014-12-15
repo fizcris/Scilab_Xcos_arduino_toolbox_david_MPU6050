@@ -9,7 +9,7 @@ Arduino v4:
 
 Arduino v4:
 
-+Added support for shield dual motor Driver POLOLU VNH5019
-+Added function to change PWM frequency in Arduino UNO and Arduino MEGA.
-(https://github.com/fizcris/PWM_frequency_Arduino_change)
--Removed support for motor driver L293 
++ Added support for shield dual motor Driver POLOLU VNH5019
++ Added function to change PWM frequency in Arduino UNO and Arduino MEGA.
+  (https://github.com/fizcris/PWM_frequency_Arduino_change)
+- Removed support for motor driver L293 
