@@ -1,7 +1,7 @@
 Scilab Xcos Arduino toolbox
 =========================================
 
-Serial Communication Toolbox for Scilab provided by David Violeau to include MPU6050 bloc and filtering for use with Arduino UNO and MEGA.
+Serial Communication Toolbox for Scilab provided by David Violeau and improoved by Cristian Alonso for use with Arduino UNO and MEGA. Tutorials and examples of apllication in the attached folder.
 
 Installation:
 + Download sketch _v4 into your arduino card. 
@@ -14,3 +14,4 @@ Changes:
 Arduino v4:
 
 + Support for MPU 6050
+ 
