@@ -6,8 +6,8 @@ Serial Communication Toolbox for Scilab provided by David Violeau and improved b
 ## Installation:
 1. Download sketch _v4 into your arduino card. 
 2. Copy arduino_svn into directory \contrib. 
-3. At beginning of scilab go to menu Modules and select Arduino. (You can recompile if necessary by executing builder.sce but I think it is not necessary.)
-4. You will have a new block called MPU6050 where you can tell which data get from card.
+3. At beginning of scilab go to menu Modules and select Arduino. (You can recompile if necessary by executing builder.sce)
+4. Finally, you will have a new block called MPU6050 where you can tell which data get from card.
 
 ## Changes:
 
